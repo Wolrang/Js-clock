@@ -8,12 +8,12 @@ function getClock() {
   clock.innerText = `${H} : ${M} : ${S}`
   if(S < "10") {
     clock.innerText = `${H} : ${M} : ${"0" + S}`
-  } else if (M < "10") {
-    lock.innerText = `${H} : ${"0" + M} : ${S}`
-  } else if (H < "10") {
+  } 
+  if (M < "10") {
+    clock.innerText = `${H} : ${"0" + M} : ${S}`
+  }
+  if (H < "10") {
     lock.innerText = `${"0" + H} : ${M} : ${S}`
-  } else {
-    clock.innerText = `${H} : ${M} : ${S}`
   }
 };
 getClock();
@@ -60,5 +60,5 @@ $("#night").click(function() {
   $(".morning, .afternoon, .evening").removeClass('active');
   $("#logo").attr("src", "./images/logo_w.png");
   $(".gnb-item, .text1, h1").css("color", "#fff");
-  $(".secondary-text, .text2").css("color", "#666");
+  $(".secondary-text, .text2").css("color", "#666")
 });
