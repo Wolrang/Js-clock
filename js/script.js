@@ -22,44 +22,43 @@ setInterval(getClock, 1000);
 $("#morning").click(function() {
   $("#bgc-img").css({"background":"url(./images/bg_morning.jpg)"});
   $("#ph-img").css({"background":"url(./images/phone_morning.png)"});
-  $("#morning, .morning").addClass('active')
-  $("#afternoon, #evening, #night").removeClass('active')
-  $(".afternoon, .evening, .night").removeClass('active')
-  $("#logo").attr("src", "./images/logo_b.png")
-  $(".gnb-item, .text1, h1").css("color", "#000")
-  $(".secondary-text, .text2").css("color", "#000")
-
+  $("#morning, .morning").addClass('active');
+  $("#afternoon, #evening, #night").removeClass('active');
+  $(".afternoon, .evening, .night").removeClass('active');
+  $("#logo").attr("src", "./images/logo_b.png");
+  $(".gnb-item, .text1, h1").css("color", "#000");
+  $(".secondary-text, .text2").css("color", "#000");
 });
 
 $("#afternoon").click(function() {
   $("#bgc-img").css({"background":"url(./images/bg_afternoon.jpg)"});
   $("#ph-img").css({"background":"url(./images/phone_afternoon.png)"});
-  $("#afternoon, .afternoon").addClass('active')
-  $("#morning, #evening, #night").removeClass('active')
-  $(".morning, .evening, .night").removeClass('active')
-  $("#logo").attr("src", "./images/logo_b.png")
-  $(".gnb-item, .text1, h1").css("color", "#000")
-  $(".secondary-text, .text2").css("color", "#000")
+  $("#afternoon, .afternoon").addClass('active');
+  $("#morning, #evening, #night").removeClass('active');
+  $(".morning, .evening, .night").removeClass('active');
+  $("#logo").attr("src", "./images/logo_b.png");
+  $(".gnb-item, .text1, h1").css("color", "#000");
+  $(".secondary-text, .text2").css("color", "#000");
 });
 
 $("#evening").click(function() {
   $("#bgc-img").css({"background":"url(./images/bg_evening.jpg)"});
   $("#ph-img").css({"background":"url(./images/phone_evening.png)"});
-  $("#evening, .evening").addClass('active')
-  $("#morning, #afternoon, #night").removeClass('active')
-  $(".morning, .afternoon, .night").removeClass('active')
-  $("#logo").attr("src", "./images/logo_b.png")
-  $(".gnb-item, .text1, h1").css("color", "#000")
-  $(".secondary-text, .text2").css("color", "#000")
+  $("#evening, .evening").addClass('active');
+  $("#morning, #afternoon, #night").removeClass('active');
+  $(".morning, .afternoon, .night").removeClass('active');
+  $("#logo").attr("src", "./images/logo_b.png");
+  $(".gnb-item, .text1, h1").css("color", "#000");
+  $(".secondary-text, .text2").css("color", "#000");
 });
 
 $("#night").click(function() {
   $("#bgc-img").css({"background":"url(./images/bg_night.jpg)"});
   $("#ph-img").css({"background":"url(./images/phone_night.png)"});
-  $("#night, .night").addClass('active')
-  $("#morning, #afternoon, #evening").removeClass('active')
-  $(".morning, .afternoon, .evening").removeClass('active')
-  $("#logo").attr("src", "./images/logo_w.png")
-  $(".gnb-item, .text1, h1").css("color", "#fff")
-  $(".secondary-text, .text2").css("color", "#666")
+  $("#night, .night").addClass('active');
+  $("#morning, #afternoon, #evening").removeClass('active');
+  $(".morning, .afternoon, .evening").removeClass('active');
+  $("#logo").attr("src", "./images/logo_w.png");
+  $(".gnb-item, .text1, h1").css("color", "#fff");
+  $(".secondary-text, .text2").css("color", "#666");
 });
