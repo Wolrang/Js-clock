@@ -6,9 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Js-clock</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
-  
-  <script src="js/script.js"></script>
+  <div class="wrapper" id="bgc-img">
+    <header class="global-header">
+    <nav class="gnb-nav">
+      <h1 class="visually-hidden">메뉴</h1>
+      <h1 class="logo">
+        <a href="./index.html">
+          <img src="./images/logo_b.png" alt="logo" id="logo">
+        </a>
+      </h1>
+
+      <ul class="gnb-list">
+        <li class="gnb-item">About</li>
+        <li class="gnb-item">Company</li>
+        <li class="gnb-item">History</li>
+        <li class="gnb-item">Community</li>
+        <li class="gnb-item">Contact us</li>
+      </ul>
+    </nav>
+    </header>
+
+    <main>
+      <section class="main-txt">
+        <div class="main-txt-box">
+          <P class="text1">Lorem<span class="secondary-text">Ipsum</span></P>
+          <P class="text2">Lorem Ipsum is simply dummy text of the printing Materials</P>
+        </div>
+      </section>
+
+      <section class="main-img" id="ph-img">
+        <div class="main-img-box">
+          <div class="main-clock-box">
+            <h1 id="clock"></h1>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="btn-box">
+          <button type="button" id="morning">
+            <p class="morning">morning</p>
+          </button>
+          <button type="button" id="afternoon">
+            <p class="afternoon">afternoon</p>
+          </button>
+          <button type="button" id="evening">
+            <p class="evening">evening</p>
+          </button>
+          <button type="button" id="night">
+            <p class="night">night</p>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
 </html>
