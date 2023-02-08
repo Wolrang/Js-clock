@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+	font-family: Orbitron;
+	src: url(./webfonts/Orbitron-Regular.eot);
+	src: url(./webfonts/Orbitron-Regular.woff) format("woff");
+}
+
+body {
+	font-family: Orbitron, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -26,7 +36,54 @@ button {
   height: 100vh;
   background-image: url(./images/bg_morning.jpg);
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 }
+
+.wrapper > img:nth-child(1) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .8;
+	animation: ani1 100s linear infinite;
+	z-index: -1;
+}
+
+.wrapper > img:nth-child(2) {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	opacity: .8;
+	animation: ani2 100s linear infinite;
+	z-index: -1;
+}
+
+@keyframes ani1 {
+	0% {
+		left: -100vw;
+	}
+	100% {
+		left: 100vw;
+	}
+}
+
+@keyframes ani2 {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 1960px;
+		opacity: 0;
+	}
+	60% {
+		left: -1840px;
+		opacity: 0.8;
+	}
+	100%{
+		left: 0;
+	}
+}
+
 
 .gnb-nav {
   width: 100%;
@@ -48,11 +105,27 @@ button {
   flex-grow: 1;
 }
 
-.gnb-item {
+.gnb-item a {
  margin-right: 40px;
  color: #000;
  font-weight: bold;
  font-size: 18px;
+ position: relative;
+}
+
+.gnb-item a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-top: 2px solid #666;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.gnb-item a:hover::after {
+  transform: scaleX(1);
 }
 
 main {
@@ -79,8 +152,13 @@ main {
 }
 
 .secondary-text {
-  margin-left: 10px;
+  margin-left: 15px;
   font-weight: 300;
+  color: #666;
+  }
+
+  .text2 {
+    color: #666;
   }
 
 .main-img {
@@ -97,15 +175,66 @@ main {
 
 .main-clock-box {
   position: absolute;
-  top: 180px;
-  left: 180px;
+  z-index: 1;
+  top: 190px;
+  left: 170px;
   width: 400px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 42px;
+}
+
+.main-clock-box img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.main-clock-box > img:nth-child(1) {
+	position: absolute;
+	left: 0;
+	opacity: .8;
+	animation: ani1 100s linear infinite;
+	z-index: -1;
+}
+
+.main-clock-box > img:nth-child(2) {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	opacity: .8;
+	animation: ani2 100s linear infinite;
+	z-index: -1;
+}
+
+@keyframes ani1 {
+	0% {
+		left: -100vw;
+	}
+	100% {
+		left: 100vw;
+	}
+}
+
+@keyframes ani2 {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 1960px;
+		opacity: 0;
+	}
+	60% {
+		left: -1840px;
+		opacity: 0.8;
+	}
+	100%{
+		left: 0;
+	}
 }
 
 footer {

@@ -6,14 +6,14 @@ function getClock() {
   let M = now.getMinutes();
   let S = now.getSeconds();
   clock.innerText = `${H} : ${M} : ${S}`
-  if(S < "10") {
+  if (S < 10) {
     clock.innerText = `${H} : ${M} : ${"0" + S}`
   } 
-  if (M < "10") {
+  if (M < 10) {
     clock.innerText = `${H} : ${"0" + M} : ${S}`
   }
-  if (H < "10") {
-    lock.innerText = `${"0" + H} : ${M} : ${S}`
+  if (H < 10) {
+    clock.innerText = `${"0" + H} : ${M} : ${S}`
   }
 };
 getClock();
@@ -26,8 +26,7 @@ $("#morning").click(function() {
   $("#afternoon, #evening, #night").removeClass('active');
   $(".afternoon, .evening, .night").removeClass('active');
   $("#logo").attr("src", "./images/logo_b.png");
-  $(".gnb-item, .text1, h1").css("color", "#000");
-  $(".secondary-text, .text2").css("color", "#000");
+  $(".gnb-item a, .text1, h1").css("color", "#000");
 });
 
 $("#afternoon").click(function() {
@@ -37,8 +36,7 @@ $("#afternoon").click(function() {
   $("#morning, #evening, #night").removeClass('active');
   $(".morning, .evening, .night").removeClass('active');
   $("#logo").attr("src", "./images/logo_b.png");
-  $(".gnb-item, .text1, h1").css("color", "#000");
-  $(".secondary-text, .text2").css("color", "#000");
+  $(".gnb-item a, .text1, h1").css("color", "#000");
 });
 
 $("#evening").click(function() {
@@ -48,8 +46,7 @@ $("#evening").click(function() {
   $("#morning, #afternoon, #night").removeClass('active');
   $(".morning, .afternoon, .night").removeClass('active');
   $("#logo").attr("src", "./images/logo_b.png");
-  $(".gnb-item, .text1, h1").css("color", "#000");
-  $(".secondary-text, .text2").css("color", "#000");
+  $(".gnb-item a, .text1, h1").css("color", "#000");
 });
 
 $("#night").click(function() {
@@ -59,6 +56,5 @@ $("#night").click(function() {
   $("#morning, #afternoon, #evening").removeClass('active');
   $(".morning, .afternoon, .evening").removeClass('active');
   $("#logo").attr("src", "./images/logo_w.png");
-  $(".gnb-item, .text1, h1").css("color", "#fff");
-  $(".secondary-text, .text2").css("color", "#666")
+  $(".gnb-item a, .text1, h1").css("color", "#fff");
 });
